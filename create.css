@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', Sans-Serif;
+}
+
+body {
+  background-color: #1C2417;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 580px; /* Ubah lebar maksimum sesuai kebutuhan */
+  width: 100%; /* Tetap menggunakan lebar 100% */
+  background-color: #1F1F1D;
+  padding: 30px;
+  border-radius: 6px;
+  color: #d7cdcd;
+}
+
+.container .title {
+  text-align: center;
+  font-size: 15px;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+
+.container header {
+  font-size: 14px;
+  margin-bottom: 1px;
+  padding: 5px;
+}
+
+.container header span {
+  color: #c12f2f;
+}
+
+.container .input-area input {
+  width: 100%;
+  padding: 13px;
+  border-radius: 14px;
+  margin-bottom: 20px;
+  background-color: #161616;
+  border: none;
+  outline: none;
+  color: white;
+}
+
+.container .button-area button,
+.btnbawah{
+  width: 100%;
+  border-radius: 20px;
+  background-color: #188e09;
+  color: white;
+  margin-bottom: 20px;
+  padding: 13px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn_send {
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.btn_send.loading {
+    background-color: #ccc; /* Ganti dengan warna loading */
+    pointer-events: none; /* Nonaktifkan interaksi dengan tombol */
+}
+
+.btn_send.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 30px; /* Ukuran efek loading */
+    height: 30px; /* Ukuran efek loading */
+    border: 4px solid white; /* Warna border */
+    border-top: 4px solid transparent; /* Warna border atas */
+    border-radius: 50%;
+    animation: spin 1s linear infinite; /* Animasi berputar */
+    transform: translate(-50%, -50%); /* Pusatkan efek loading */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.container p {
+  color: #d7cdcd;
+  font-size: 15px;
+}
+
+.container p a {
+  color: #188e09;
+  text-decoration: none;
+}
+
+.container p a:hover {
+  text-decoration: underline;
+}
+
+form .error-message {
+    color: #c12f2f;
+    margin-left: 5px; 
+    font-size: 0.9em;
+    font-style: italic;
+    display: inline;
+}
+
+.container2 {
+    background-color: #1F1F1D;
+    padding: 20px; /* Anda bisa mengurangi padding ini jika perlu */
+    color: #d7cdcd;
+    border-radius: 11px;
+    max-width: 600px; /* Atur lebar maksimum */
+    margin: 0 auto; /* Pusatkan kontainer */
+}
+
+.message-box {
+    background-color: #252D20;
+    padding: 20px; /* Anda bisa mengurangi padding ini jika perlu */
+    border-radius: 15px;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 200px; /* Atur tinggi maksimum */
+    overflow: auto; /* Tambahkan scroll jika konten melebihi tinggi maksimum */
+}
+.container2 h1 {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  }
+
+        .message-box i {
+            color: #188e09;
+            font-size: 24px;
+            margin-right: 10px;
+            padding: 13px;
+        }
+        .message-box p {
+            margin: 0;
+            font-size: 18px;
+        }
+        
+        .message-box .bawah {
+            margin: 0;
+            font-size: 16px;
+            color: #188e09;
+        }
+        
+        .message-box p span {
+            color: #188e09;
+        }
+        
+.container2 .message-box img {
+  filter: invert(36%) sepia(40%) saturate(1736%) hue-rotate(77deg) brightness(102%) contrast(96%);
+  max-width: 75%;
+  max-height: 75px;
+  padding: 13px;
+  color: red;
+}
+
+.message-box #sukses {
+  color: green;
+  padding: 13px !important;
+}
+
+/* CSS untuk SweetAlert */
+.swal2-popup {
+    background-color: #1F1F1D;
+    color: #d7cdcd; 
+    border-radius: 8px;
+}
+
+.swal2-title {
+    color: #d7cdcd; 
+}
+
+.swal2-confirm {
+    background-color: #188e09; 
+    color: white;
+    border-radius: 18px;
+}
+
+/* Media Queries untuk Responsivitas */
+@media (max-width: 600px) {
+  .container {
+    max-width: 90%; /* Lebar maksimum untuk perangkat mobile */
+  }
+}
