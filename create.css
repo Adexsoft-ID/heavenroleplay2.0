@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-  max-width: 580px; /* Ubah lebar maksimum sesuai kebutuhan */
+  max-width: 580px; /* Ubah r maksimum sesuai kebutuhan */
   width: 100%; /* Tetap menggunakan lebar 100% */
   background-color: #1F1F1D;
   padding: 30px;
